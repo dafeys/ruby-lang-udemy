@@ -72,6 +72,23 @@ end
 
 10.times { |i| puts((i+1)*3) }
 
+###############################################
+
+5.downto(1) { |i| puts" Countdown: #{i}" }
+
+5.downto(0) do |num|
+    puts "We are currently on #{num}"
+    #some code
+end
+
+5.upto(10) { |i| puts "We're moving on up!"}
+
+0.step(100, 5) { |i| puts i }
+
+0.step(50, 7) do |num|
+    puts "Alright, let's fo up by 7 again"
+    puts "I'm now on #{num}"
+end
 
 
 

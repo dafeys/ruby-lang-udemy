@@ -8,7 +8,7 @@ d = ""
 d.length
 
 class Foo
-    def bar; end
+  def bar; end
 end
 
 Foo.new.bar

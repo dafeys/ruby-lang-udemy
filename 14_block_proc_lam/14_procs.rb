@@ -34,3 +34,55 @@ is_old = Proc.new do |age|
 end
 
 p ages.select(&is_old)
+puts
+
+
+############### PROC II #####################
+def greeter
+  puts "I'm inside the method"
+  yield
+end
+
+phrase = Proc.new do
+  puts "Inside the proc"
+end
+
+greeter(&phrase)# {puts 'Hello from the custom block'}
+puts
+
+
+#------------------------------------------
+hi = Proc.new { puts "Hi there" }
+hi.call
+
+3.times(&hi)
+puts
+
+
+# ----------------- *** pass a ruby method as Proc ***  ----------------    #
+p ["1", "3", "5"].map{|element| element.to_i}
+p ["1", "3", "5"].map(&:to_i)
+
+p [13,45,65].map(&:to_s)
+
+p [1,2,3,4,5].select{|num| num.even?}
+p [1,2,3,4,5].select(&:even?)
+puts
+
+
+# ----------------- *** method with Proc Paremeters *** ------------------ #
+def talk_about(name, &my_proc)
+  puts "Let me tekk you about #{name}"
+  my_proc.call(name)
+end
+
+good = Proc.new {|name| puts"#{name} is a genius!"}
+bad = Proc.new {|name| puts"#{name} is a dolt"}
+
+talk_about("Joe",&good)
+talk_about("Jim", &bad)
+
+
+
+
+

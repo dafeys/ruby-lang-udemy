@@ -108,28 +108,6 @@ p arr.last(2)  # array of 2 last elements
 p arr.first(1)  # array of one element
 p arr.last(1)
 
-def custom_first(arr, num = 0)
-  return arr[0] if num == 0
-  temp_arr = []
-  i = 0
-  while i < num do
-    temp_arr[i] = arr[i]
-    i += 1
-  end
-  return temp_arr
-end
-
-first_arr = custom_first(arr, 2)
-p first_arr
-
-def custom_last(arr, num = 0)
-  temp_arr = []
-  len = arr.length
-  for i in 0...num do
-    temp_arr[i] = arr[len-1-i]
-  end
-  return temp_arr
-end
-
-last_arr = custom_last(arr,3)
-p last_arr
+   #.odd? puts 'yes'}
+#p arr.each_index. {|i| puts i}
+#arr.each_index{|i| puts"#{i} #{arr[i]}"}

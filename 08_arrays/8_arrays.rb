@@ -108,6 +108,97 @@ p arr.last(2)  # array of 2 last elements
 p arr.first(1)  # array of one element
 p arr.last(1)
 
-   #.odd? puts 'yes'}
-#p arr.each_index. {|i| puts i}
-#arr.each_index{|i| puts"#{i} #{arr[i]}"}
+
+# the push metods
+locations = %w[House, Airport, Bar]
+
+locations.push("Restaurant", "Saloon")
+
+locations << "Home"
+locations << "Office" << "Forest"
+
+# insert by index position
+locations.insert(0, "Sea")
+locations.insert(-1, "Village", "Saloon")
+
+p locations
+puts
+
+
+# the pop 
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+last_element = arr.pop  # return element
+
+p arr
+p last_element
+
+two_items = arr.pop(2)  # removes 2 lasts elements
+p two_items
+p arr
+
+item = arr.pop(1)  # returns an array of 1 element
+
+
+# the shift and unshift
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+arr.shift  # remover first element and shift arr
+p arr
+
+extract_arr = arr.shift(3)
+p extract_arr
+p arr
+
+arr.unshift(33, 44)  # add element at begin of arr
+p arr
+puts
+
+
+# array comparising
+a = [1 ,2, 3]
+b = [1, 2, 3, 4]
+c = [3, 2, 1]
+d = [1, 2, 3]
+
+p a == b  # false
+p a == c  # false
+p a == d  # true
+p a != c  # true
+
+
+# spaceship operator   <=> ---   -1 0 2
+p 5 <=> 5  # 0
+p 5 <=> 7  # -1 
+p 5 <=> 3  # 1 positive if is bibber
+p 5 <=> [1, 2]  # nil when incopareble
+
+p [3, 4, 5] <=> [3, 4, 5]  # 0
+p [3, 4, 5] <=> [4, 1, 5]  # -1
+
+p [1, 2, 30] <=> [1, 2, 10]  # 1
+
+
+# convert range to array
+letters_range = "A".."T"
+p letters_range
+arr = letters_range.to_a
+
+numbers_range = 400..450
+p numbers_range.to_a
+puts
+
+
+# the is_a? method
+p 100.is_a?(Numeric)
+p 100.is_a?(Integer)
+p 100.is_a?(Object)
+p 100.is_a?(BasicObject)
+
+p ["a", 3].is_a?(Array)
+
+arr = [3, 4]
+if arr.is_a?(Array)
+  arr.each{|i| p i}
+end
+

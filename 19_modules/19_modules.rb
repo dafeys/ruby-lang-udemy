@@ -1,3 +1,4 @@
+#==== module sample
 module LengthConversions
   WEBSITE = 'https://moesko.com'
 
@@ -19,3 +20,8 @@ end
 puts LengthConversions::WEBSITE
 puts LengthConversions.miles_to_feet(100)
 puts LengthConversions.miles_to_inches(200)
+
+#==== The Math module
+puts Math::PI
+puts Math.cos(60)
+
